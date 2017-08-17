@@ -9,10 +9,6 @@
 
 import UIKit
 
-let gameTime = 45
-let maxNumberOfWordsInWordsArray = 3 // wordsArray: correctWord + 2 incorrect words
-let myBlueColor = UIColor(red: 10/255, green: 100/255, blue: 150/255, alpha: 1)
-
 class GameViewController : UIViewController {
 
     // MARK: - Properties
@@ -28,15 +24,12 @@ class GameViewController : UIViewController {
     @IBOutlet weak var instructionsTextView: UITextView!
     @IBOutlet weak var beeImageView: UIImageView!
 
-    var currentGameTime = gameTime
+    var currentGameTime = Constants.Values.gameTime
     var wordFontSize = 40
     var correctWord: String?
     var timer : Timer?
-    
     var selectedIncorrectWord: String = ""
-    
     let dao = DAO.sharedInstance
-    
     
     // MARK: - View Methods
     
@@ -45,27 +38,7 @@ class GameViewController : UIViewController {
         
         //add gradient bkg
         addGradientBackground()
-        
-        //setup left and right SwipeGestureRecognizers and functions
-        // add right gesture for view
-        let viewRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleRightSwipe))
-        viewRightSwipe.direction = .right
-        self.view.addGestureRecognizer(viewRightSwipe)
-
-        // add right gesture for next word label
-        let labelRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleRightSwipe))
-        labelRightSwipe.direction = .right
-        wordDisplayedLabel.addGestureRecognizer(labelRightSwipe)
-        
-        // add left gesture for view
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleLeftSwipe))
-        leftSwipe.direction = .left
-        self.view.addGestureRecognizer(leftSwipe)
-
-        // add left gesture for next word label
-        let labelLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleLeftSwipe))
-        labelLeftSwipe.direction = .left
-        wordDisplayedLabel.addGestureRecognizer(labelLeftSwipe)
+        setupGestures()
         
         // show instructions at startup
         instructionsTextView.isHidden = false
@@ -74,6 +47,7 @@ class GameViewController : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // reset bee animation
+        
         beeImageView.image = #imageLiteral(resourceName: "Icon")
         beeImageView.contentMode = .center
         
@@ -86,13 +60,37 @@ class GameViewController : UIViewController {
             dao.backgroundMusic.pause()
         }
         resetGame()
+    }
+    
+    func setupGestures(){
+        //setup left and right SwipeGestureRecognizers and functions
         
+        // add right gesture for view
+        let viewRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleRightSwipe))
+        viewRightSwipe.direction = .right
+        self.view.addGestureRecognizer(viewRightSwipe)
+        
+        // add right gesture for next word label
+        let labelRightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleRightSwipe))
+        labelRightSwipe.direction = .right
+        wordDisplayedLabel.addGestureRecognizer(labelRightSwipe)
+        
+        // add left gesture for view
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleLeftSwipe))
+        leftSwipe.direction = .left
+        self.view.addGestureRecognizer(leftSwipe)
+        
+        // add left gesture for next word label
+        let labelLeftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleLeftSwipe))
+        labelLeftSwipe.direction = .left
+        wordDisplayedLabel.addGestureRecognizer(labelLeftSwipe)
     }
     
     // MARK: - Play Game Methods
 
     @IBAction func playButtonTapped(_ sender: UIButton) {
         // begin game
+        
         resetGame()
         dao.resetGameOverWordsList()
         instructionsTextView.isHidden = true
@@ -109,9 +107,9 @@ class GameViewController : UIViewController {
     // MARK: - Reset Game
 
     func resetGame(){
-        
         // reset for a new game
-        currentGameTime = gameTime
+        
+        currentGameTime = Constants.Values.gameTime
         wordDisplayedLabel.alpha = 0.0
         XLabel.alpha = 0.0
         rightGestArrow.alpha = 0.0
@@ -120,7 +118,6 @@ class GameViewController : UIViewController {
         timerLabel.text = "Secs: \(currentGameTime)"
         playButton.isHidden = false
         dao.playGame = false
-
         dao.guessedCorrect = false
         dao.didSwipeRight = false
         dao.didSwipeLeft = false
@@ -131,13 +128,13 @@ class GameViewController : UIViewController {
     
     // MARK: - Timer Methods
 
-    
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true);
     }
 
     func updateTimer(sender : Timer) {
         // update timer label for the game
+        
         if currentGameTime > 0 {
             currentGameTime -= 1
             timerLabel.text = "Sec: \(currentGameTime)"
@@ -147,13 +144,11 @@ class GameViewController : UIViewController {
         }
     }
 
-    
-    
     // MARK: - Swipe Gesture Methods
-
 
     func handleLeftSwipe() {
         // swipe word left off screen
+        
         if (dao.playGame == true) {
             dao.didSwipeLeft = false
             UIView.animate(withDuration: 0.25, animations: {
@@ -168,6 +163,7 @@ class GameViewController : UIViewController {
     
     func handleRightSwipe() {
         // swipe word right off screen
+        
         if (dao.playGame == true) {
             self.dao.didSwipeRight = false
             UIView.animate(withDuration: 0.25, animations: {
@@ -179,7 +175,6 @@ class GameViewController : UIViewController {
             }
         }
     }
-    
     
     // MARK: - Get and Show Next Word Methods
     
@@ -203,7 +198,6 @@ class GameViewController : UIViewController {
             // pick a random word in the wordArray of the selected word object - wordArray[0] contains the correct word, wordArray[1,2,3] has incorrect spelling of the word
             let index2 = Int(arc4random_uniform(UInt32(dao.mainWordsArray[index1].wordsArray.count)))
             
-            
             // check if word has been displayed
             if dao.wordsDisplayedDict[(dao.nextWord?.wordsArray[index2])!] == nil {
                 // use new nextWord - has not been displayed
@@ -216,10 +210,9 @@ class GameViewController : UIViewController {
         showNextWord(wordDisplayed: dao.wordDisplayed)
     }
     
-    
     func showNextWord (wordDisplayed: String) {
-        
         //animate nextWord to drop from the top to middle with a slight bounce
+        
         wordDisplayedLabel.alpha = 0.0
         UIView.animate(withDuration: 0.25) {
             self.wordDisplayedLabel.alpha = 1.0
@@ -249,10 +242,8 @@ class GameViewController : UIViewController {
     }
     
     // MARK: - Check Guess Methods
-
     
     func checkAnswer(swipe: Bool) {
-        
         // check if player guessed if word the displayed was correctly spelled or misspelled based on the swipe
         
         dao.guessedCorrect = false
@@ -260,8 +251,7 @@ class GameViewController : UIViewController {
         if (swipe == dao.didSwipeRight) {
             
             if (dao.wordDisplayed == correctWord) {
-                // guessed right: swiped right + correct word
-                // correct: swiped right on correct word. show green arrow and check mark
+                // guessed correct: swiped right on correct word. show green arrow and check mark
                 rightGestArrow.image = UIImage(named: "rightGreenArrow.png")
                 self.rightGestArrow.alpha = 1
                 self.XLabel.image = UIImage(named:"correct.png")
@@ -299,8 +289,8 @@ class GameViewController : UIViewController {
         } else if (swipe == dao.didSwipeLeft) {
             
             if (dao.wordDisplayed == correctWord) {
-                
                 // guessed wrong: swiped Left on a correct word. show pink arrow & XLabel
+                
                 leftGestArrow.image = UIImage(named: "leftPinkArrow.png")
                 self.leftGestArrow.alpha = 1
                 self.XLabel.image = UIImage(named: "X2.png")
@@ -318,6 +308,7 @@ class GameViewController : UIViewController {
         
             else  {
                 // guessed correct: swiped Left on incorrect word. show green arrow and check mark
+                
                 leftGestArrow.image = UIImage(named: "leftGreenArrow.png")
                 self.leftGestArrow.alpha = 1
                 self.XLabel.image = UIImage(named: "correct.png")
@@ -330,12 +321,10 @@ class GameViewController : UIViewController {
                 // check if the word is in either guessedRightDict or guessedWrongDict and add to corresponding word list
                 if (dao.guessedRightDict[correctWord!] == nil && dao.guessedWrongDict[correctWord!] == nil) {
                     dao.guessedRightDict[correctWord!] = dao.nextWord?.definition
-                    
                 }
                 dao.guessedCorrect = true
             }
         }
-        
         updateScore()
     }
     
@@ -348,9 +337,7 @@ class GameViewController : UIViewController {
         dao.totalNumWordsDisplayed += 1
         scoreLabel.text = "Score: \(dao.scored)"
         getNextWord()
-
     }
-    
     
     // MARK: - Game Over Methods
 
@@ -368,7 +355,6 @@ class GameViewController : UIViewController {
         gameOverVC.scoreOutput = dao.finalOutput
         self.present(gameOverVC, animated: true, completion: nil)
     }
-    
     
     // MARK: - Misc Methods
     
@@ -409,8 +395,6 @@ class GameViewController : UIViewController {
         }
     }
     
-
-    
     func addGradientBackground() {
         
         //display gradient background for view
@@ -431,17 +415,15 @@ class GameViewController : UIViewController {
         gradientLayer.locations = [0.0, 1.0]
 
         self.view.layer.insertSublayer(gradientLayer, at: 0)
-        
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 }
 
 extension String {
+    
     func initialCaps() -> String {
         let first = String(characters.prefix(1)).capitalized
         let other = String(characters.dropFirst())

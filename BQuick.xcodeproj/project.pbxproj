@@ -15,7 +15,6 @@
 		00560D901D0B15CE00AD0D70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00560D8F1D0B15CE00AD0D70 /* AppDelegate.swift */; };
 		00560D921D0B15CE00AD0D70 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00560D911D0B15CE00AD0D70 /* GameViewController.swift */; };
 		00560D951D0B15CE00AD0D70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00560D931D0B15CE00AD0D70 /* Main.storyboard */; };
-		00560D981D0B15CE00AD0D70 /* BQuick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00560D961D0B15CE00AD0D70 /* BQuick.xcdatamodeld */; };
 		00560D9D1D0B15CE00AD0D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00560D9B1D0B15CE00AD0D70 /* LaunchScreen.storyboard */; };
 		00666E071EFF5F45004387BD /* flight_of_the_bumblebee.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00666E061EFF5F45004387BD /* flight_of_the_bumblebee.mp3 */; };
 		00666E0B1F00327C004387BD /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00666E0A1F00327C004387BD /* Swift+Gif.swift */; };
@@ -23,6 +22,7 @@
 		00875FBA1F3F71F8003B2016 /* words-master.json in Resources */ = {isa = PBXBuildFile; fileRef = 00875FB91F3F71F8003B2016 /* words-master.json */; };
 		00AD25E31ED5FB580087BF47 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AD25E21ED5FB580087BF47 /* GameOverViewController.swift */; };
 		00EB43B31F186B0200CF99A8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EB43B21F186B0200CF99A8 /* SwiftyJSON.framework */; };
+		00F572921F44DF64001F90C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F572911F44DF64001F90C1 /* Constants.swift */; };
 		5F236E71E6981887776CBAE5 /* Pods_BQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB8361D958B9CEDD50923DA /* Pods_BQuick.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,6 @@
 		00560D8F1D0B15CE00AD0D70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00560D911D0B15CE00AD0D70 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		00560D941D0B15CE00AD0D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		00560D971D0B15CE00AD0D70 /* BQuick.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BQuick.xcdatamodel; sourceTree = "<group>"; };
 		00560D9C1D0B15CE00AD0D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00560D9E1D0B15CE00AD0D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00666E061EFF5F45004387BD /* flight_of_the_bumblebee.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flight_of_the_bumblebee.mp3; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		00AD25E21ED5FB580087BF47 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		00EB43B21F186B0200CF99A8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/BQuick-ftmifzexgkelxhdepkgrfoikiktv/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		00EB43B41F186E6600CF99A8 /* words-test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "words-test.json"; path = "BQuick/words-test.json"; sourceTree = "<group>"; };
+		00F572911F44DF64001F90C1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AA6983922452E9A4FA9899AA /* Pods-BQuick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BQuick.release.xcconfig"; path = "Pods/Target Support Files/Pods-BQuick/Pods-BQuick.release.xcconfig"; sourceTree = "<group>"; };
 		ABB8361D958B9CEDD50923DA /* Pods_BQuick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BQuick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2BD163CCBBE57066C6296F /* Pods-BQuick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BQuick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BQuick/Pods-BQuick.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				00560D8F1D0B15CE00AD0D70 /* AppDelegate.swift */,
+				00F572911F44DF64001F90C1 /* Constants.swift */,
 				00666E0A1F00327C004387BD /* Swift+Gif.swift */,
 				00292ED01ED640420005F87A /* PaddedLabel.swift */,
 				000302551ED525D60079E103 /* Word.swift */,
@@ -95,7 +96,6 @@
 				00560D931D0B15CE00AD0D70 /* Main.storyboard */,
 				00560D9B1D0B15CE00AD0D70 /* LaunchScreen.storyboard */,
 				00560D9E1D0B15CE00AD0D70 /* Info.plist */,
-				00560D961D0B15CE00AD0D70 /* BQuick.xcdatamodeld */,
 				00875FB91F3F71F8003B2016 /* words-master.json */,
 				001734941ED5F45E0018BFCC /* asset.xcassets */,
 				00666E101F00C3A6004387BD /* beeAnimation3.gif */,
@@ -259,7 +259,7 @@
 				000302561ED525D60079E103 /* Word.swift in Sources */,
 				00292ED11ED640420005F87A /* PaddedLabel.swift in Sources */,
 				00560D901D0B15CE00AD0D70 /* AppDelegate.swift in Sources */,
-				00560D981D0B15CE00AD0D70 /* BQuick.xcdatamodeld in Sources */,
+				00F572921F44DF64001F90C1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,19 +425,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		00560D961D0B15CE00AD0D70 /* BQuick.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				00560D971D0B15CE00AD0D70 /* BQuick.xcdatamodel */,
-			);
-			currentVersion = 00560D971D0B15CE00AD0D70 /* BQuick.xcdatamodel */;
-			path = BQuick.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 00560D841D0B15CE00AD0D70 /* Project object */;
 }
