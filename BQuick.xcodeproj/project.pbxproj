@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		000302541ED525A80079E103 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000302531ED525A80079E103 /* DAO.swift */; };
 		000302561ED525D60079E103 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000302551ED525D60079E103 /* Word.swift */; };
-		001734951ED5F45E0018BFCC /* asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001734941ED5F45E0018BFCC /* asset.xcassets */; };
 		00292ED11ED640420005F87A /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00292ED01ED640420005F87A /* PaddedLabel.swift */; };
 		00495F581ED8CBB1008500CD /* NSAttributedString+DimensionMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00495F571ED8CBB1008500CD /* NSAttributedString+DimensionMethods.swift */; };
 		00560D901D0B15CE00AD0D70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00560D8F1D0B15CE00AD0D70 /* AppDelegate.swift */; };
@@ -21,6 +20,7 @@
 		00666E111F00C3A6004387BD /* beeAnimation3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 00666E101F00C3A6004387BD /* beeAnimation3.gif */; };
 		00875FBA1F3F71F8003B2016 /* words-master.json in Resources */ = {isa = PBXBuildFile; fileRef = 00875FB91F3F71F8003B2016 /* words-master.json */; };
 		00AD25E31ED5FB580087BF47 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AD25E21ED5FB580087BF47 /* GameOverViewController.swift */; };
+		00B271A21F45F27C002E9854 /* asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B271A11F45F27C002E9854 /* asset.xcassets */; };
 		00EB43B31F186B0200CF99A8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EB43B21F186B0200CF99A8 /* SwiftyJSON.framework */; };
 		00F572921F44DF64001F90C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F572911F44DF64001F90C1 /* Constants.swift */; };
 		5F236E71E6981887776CBAE5 /* Pods_BQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB8361D958B9CEDD50923DA /* Pods_BQuick.framework */; };
@@ -29,7 +29,6 @@
 /* Begin PBXFileReference section */
 		000302531ED525A80079E103 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		000302551ED525D60079E103 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		001734941ED5F45E0018BFCC /* asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = asset.xcassets; sourceTree = "<group>"; };
 		00292ED01ED640420005F87A /* PaddedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
 		00495F571ED8CBB1008500CD /* NSAttributedString+DimensionMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+DimensionMethods.swift"; sourceTree = "<group>"; };
 		00560D8C1D0B15CE00AD0D70 /* BQuick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BQuick.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +42,7 @@
 		00666E101F00C3A6004387BD /* beeAnimation3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = beeAnimation3.gif; sourceTree = "<group>"; };
 		00875FB91F3F71F8003B2016 /* words-master.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "words-master.json"; sourceTree = "<group>"; };
 		00AD25E21ED5FB580087BF47 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		00B271A11F45F27C002E9854 /* asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = asset.xcassets; sourceTree = "<group>"; };
 		00EB43B21F186B0200CF99A8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/BQuick-ftmifzexgkelxhdepkgrfoikiktv/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		00EB43B41F186E6600CF99A8 /* words-test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "words-test.json"; path = "BQuick/words-test.json"; sourceTree = "<group>"; };
 		00F572911F44DF64001F90C1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -97,10 +97,10 @@
 				00560D9B1D0B15CE00AD0D70 /* LaunchScreen.storyboard */,
 				00560D9E1D0B15CE00AD0D70 /* Info.plist */,
 				00875FB91F3F71F8003B2016 /* words-master.json */,
-				001734941ED5F45E0018BFCC /* asset.xcassets */,
 				00666E101F00C3A6004387BD /* beeAnimation3.gif */,
 				00495F571ED8CBB1008500CD /* NSAttributedString+DimensionMethods.swift */,
 				00666E061EFF5F45004387BD /* flight_of_the_bumblebee.mp3 */,
+				00B271A11F45F27C002E9854 /* asset.xcassets */,
 			);
 			path = BQuick;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001734951ED5F45E0018BFCC /* asset.xcassets in Resources */,
 				00560D9D1D0B15CE00AD0D70 /* LaunchScreen.storyboard in Resources */,
 				00560D951D0B15CE00AD0D70 /* Main.storyboard in Resources */,
+				00B271A21F45F27C002E9854 /* asset.xcassets in Resources */,
 				00666E111F00C3A6004387BD /* beeAnimation3.gif in Resources */,
 				00666E071EFF5F45004387BD /* flight_of_the_bumblebee.mp3 in Resources */,
 				00875FBA1F3F71F8003B2016 /* words-master.json in Resources */,
