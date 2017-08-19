@@ -2,7 +2,7 @@
 //  GameViewController.swift
 //  BQuick
 //
-//  Created by Emiko Clark on 5/23/17
+//  Created by Emiko Clark on 6/10/17.
 //  Copyright © 2016 Emiko Clark. All rights reserved.
 //
 

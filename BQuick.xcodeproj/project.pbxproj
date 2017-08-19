@@ -159,7 +159,7 @@
 				TargetAttributes = {
 					00560D8B1D0B15CE00AD0D70 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 6F8P242K3J;
+						DevelopmentTeam = X9KW2SQ39Q;
 						LastSwiftMigration = 0830;
 					};
 				};
@@ -381,9 +381,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9KW2SQ39Q;
 				INFOPLIST_FILE = BQuick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emikoclark.BQuick;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emikoclark.BeeQuick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -395,9 +396,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9KW2SQ39Q;
 				INFOPLIST_FILE = BQuick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emikoclark.BQuick;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emikoclark.BeeQuick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

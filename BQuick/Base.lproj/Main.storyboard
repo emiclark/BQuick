@@ -131,11 +131,11 @@
                                 <rect key="frame" x="129.66666666666666" y="113" width="57" height="57"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rer-Jp-Gca">
-                                <rect key="frame" x="79.666666666666686" y="297" width="255" height="261"/>
+                                <rect key="frame" x="83" y="214" width="255" height="324"/>
                                 <color key="backgroundColor" red="1" green="0.99127439004561391" blue="0.87576156875601219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="255" id="9cM-Jl-K1v"/>
-                                    <constraint firstAttribute="height" constant="261" id="fBW-bA-mK3"/>
+                                    <constraint firstAttribute="height" constant="324" id="fBW-bA-mK3"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="swipe">
@@ -157,11 +157,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="toG-dv-Zq3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="28" id="0Cy-AQ-A5i"/>
-                            <constraint firstItem="Rer-Jp-Gca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2FT-ng-7P6"/>
+                            <constraint firstItem="Rer-Jp-Gca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="3.5" id="2FT-ng-7P6"/>
                             <constraint firstItem="Ssf-dc-Bae" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="231" id="3eT-RX-MAk"/>
                             <constraint firstItem="Y3Q-fy-L6w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="6CK-GN-zQG"/>
                             <constraint firstItem="Zk8-RO-IHu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="358" id="6hj-0f-8jc"/>
-                            <constraint firstItem="Rer-Jp-Gca" firstAttribute="top" secondItem="toG-dv-Zq3" secondAttribute="bottom" constant="139" id="8nr-vl-s72"/>
+                            <constraint firstItem="Rer-Jp-Gca" firstAttribute="top" secondItem="toG-dv-Zq3" secondAttribute="bottom" constant="56" id="8nr-vl-s72"/>
                             <constraint firstItem="fiI-yW-0uC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="EtQ-mN-W7c"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dOG-Sm-z8S" secondAttribute="bottom" constant="69" id="HTO-7i-217"/>
                             <constraint firstItem="toG-dv-Zq3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="Klv-X0-dQP"/>
@@ -177,7 +177,7 @@
                             <constraint firstItem="Zk8-RO-IHu" firstAttribute="bottom" secondItem="CYp-M3-Sr1" secondAttribute="bottom" constant="-2" id="jFn-bq-qAY"/>
                             <constraint firstItem="wZY-pp-Bnq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="nw0-cZ-Tfh"/>
                             <constraint firstItem="Ssf-dc-Bae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pdh-sD-6ON"/>
-                            <constraint firstItem="Rer-Jp-Gca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y2q-p8-5Dd"/>
+                            <constraint firstItem="Rer-Jp-Gca" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="3.5" id="y2q-p8-5Dd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5OA-eM-L39"/>
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-695.20000000000005" y="-36.431784107946029"/>
+            <point key="canvasLocation" x="-695.6521739130435" y="-36.684782608695656"/>
         </scene>
         <!--Score-->
         <scene sceneID="BSG-HW-XZy">
